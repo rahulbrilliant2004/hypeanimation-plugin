@@ -57,7 +57,7 @@ function add_hypeanimations_shortcode_button_footer() {
 			uploadMultiple: false,
 			maxFiles: 1,
 			acceptedFiles: ".oam",
-			dictDefaultMessage: "'.__( 'Drop .OAM file or click here to upload' , 'hype-animations' ).'",
+			dictDefaultMessage: "'.__( 'Drop .OAM file or click here to upload<br>(Max. upload size '. ini_get("upload_max_filesize") .')' , 'hype-animations' ).'",
 			success: function(file,resp) {
 				jQuery(".dropzone").after("<div class=\"dropzone2\" style=\"display:none\">'.__( 'You can now insert this shortcode where you want to insert the animation' , 'hype-animations' ).' : <b>[hypeanimations_anim id=\""+resp+"\"]</b></div>");
 			},
@@ -72,7 +72,7 @@ function add_hypeanimations_shortcode_button_footer() {
 			uploadMultiple: false,
 			maxFiles: 1,
 			acceptedFiles: ".oam",
-			dictDefaultMessage: "'.__( 'Drop .OAM file or click here to upload' , 'hype-animations' ).'",
+			dictDefaultMessage: "'.__( 'Drop .OAM file or click here to upload<br>(Max. upload size '. ini_get("upload_max_filesize") .')' , 'hype-animations' ).'",
 			success: function(file,resp) {
 				wp.media.editor.insert("[hypeanimations_anim id=\""+resp+"\"]");
 				this.removeFile(file);

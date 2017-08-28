@@ -8,6 +8,8 @@ function check_hypeanimation_iframe(){
 	$just_hypeanimations = $getVar['just_hypeanimations'];
 	if ($just_hypeanimations>0) {
 		$animcode = $wpdb->get_var("SELECT code FROM ".$table_name." WHERE id='".ceil($just_hypeanimations)."' LIMIT 1");
+		$animcode = str_replace("https://", "//", html_entity_decode($animcode));
+		$animcode = str_replace("http://", "//", html_entity_decode($animcode));
 		echo '
 <!DOCTYPE html>
 <html>
