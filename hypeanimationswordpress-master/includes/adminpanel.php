@@ -239,7 +239,7 @@ function hypeanimations_panel() {
 			if (file_exists($uploaddir.'/config.xml')) {
 				unlink($uploaddir.'/config.xml');
 			}
-			$new_name = str_replace('.oam', '', basename($_FILES['file']['name']));
+			$new_name = str_replace('.oam', '', basename($_FILES['updatefile']['name']));
 			rename($uploaddir.'Assets/'.$new_name.'.hyperesources', $uploaddir.'Assets/index.hyperesources');
 			$files = scandir($uploaddir.'Assets/');
 			for ($i=0;isset($files[$i]);$i++) {
@@ -252,6 +252,8 @@ function hypeanimations_panel() {
 					else { 
 						$maxid=1;
 					}
+					$update_name = $wpdb -> query("UPDATE ".$table_name." SET nom='".$new_name."' WHERE id='".$actdataid."' LIMIT 1");
+
 					if (file_exists($uploadfinaldir.$actdataid.'/')) {
 						hyperrmdir($uploadfinaldir.$actdataid.'/');
 					}

@@ -25,10 +25,10 @@ function hypeanimations_init() {
 	}
 	$upload_dir = wp_upload_dir();
 	if (!file_exists($upload_dir['basedir'].'/hypeanimations/')) {
-		mkdir($upload_dir['basedir'].'/hypeanimations/', 0644);
+		mkdir($upload_dir['basedir'].'/hypeanimations/');
 	}
 	if (!file_exists($upload_dir['basedir'].'/hypeanimations/tmp/')) {
-		mkdir($upload_dir['basedir'].'/hypeanimations/tmp/', 0644);
+		mkdir($upload_dir['basedir'].'/hypeanimations/tmp/');
 	}
 }
 function hypeanimations_install() {
