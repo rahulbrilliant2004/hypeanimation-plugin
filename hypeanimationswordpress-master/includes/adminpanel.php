@@ -132,7 +132,7 @@ function hypeanimations_panel() {
 	<div class="eraabout"><h2>'.__( 'About' , 'hype-animations' ).' <a href="http://www.eralion.com" target="_blank" class="eralink">ERALION.com</a></h2><div class="hypeanimbloc">'.__( 'If you have any problem with this plugin, you can' , 'hype-animations' ).' <a href="http://www.eralion.com/contactez-nous/" target="_blank">'.__( 'contact us' , 'hype-animations' ).'</a>.<br>'.__( 'We can also create customs plugins and others web services.' , 'hype-animations' ).'</div></div>
 	<h2>'.__( 'Add new animation' , 'hype-animations' ).'</h2>
 	<div class="hypeanimbloc">
-	'.__( 'Upload a .OAM file exported by Tumult Hype and it will generate a shortcode that you will can insert everywhere you want on your website.' , 'hype-animations' ).'<br><br>
+	'.__( 'Upload a .OAM file exported by Tumult Hype and it will generate a shortcode that you will can insert into posts & pages.' , 'hype-animations' ).'<br><br>
 	<a href="#oModal1" class="button" id="add_hypeanimations_shortcode_newbutton" style="outline: medium none !important; cursor: pointer;" ><i class="dashicons-before dashicons-plus-alt"></i> '.__( 'Upload new animation' , 'hype-animations' ).'</a>
 	</div>';
 	if ($_GET['delete']>0) {
