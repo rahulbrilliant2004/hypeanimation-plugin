@@ -4,14 +4,14 @@ table.dataTable tbody tr:last-child td { border-bottom:0px; }
 table.dataTable { width:98% !important; }
 .animdelete { background:#FF0000;margin:1px;color:#FFF;padding:5px;border:1px solid #FF0000;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
 .animdelete:hover { color:#FF0000;background:#fff; }
-.animupdate {background:#0000cc;margin:1px;color:#FFF;padding:5px;border:1px solid #0000cc;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
-.animupdate:hover { color:#0000cc;background:#fff; }
+.animupdate {background:#0099cc;margin:1px;color:#FFF;padding:5px;border:1px solid #0099cc;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
+.animupdate:hover { color:#0099cc;background:#fff; }
 pre { padding:10px;background:#eee;border:1px solid #eee; }
 pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:bold;}
 .hypeanimbloc { display:inline-block;padding:10px;background:#FFF;border:1px solid #000;color:#000; }
-.eraabout { float:right; padding-right:20px; }
+.eraabout { display:none;float:right; padding-right:20px; }
 .eraabout h2 { text-align:right; }
-.eralink { color:#07bee5; }
+.eralink { color:#0099cc; }
 .eralogo {
 	position:absolute;
 	top:10px;
@@ -34,7 +34,7 @@ pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:b
 	margin-top: 3px;
 }
 #choosehypeanimation {
-	background:#336699;
+	background:#0099cc;
 	color:#FFF;
 	padding:5px;
 	border:0;
@@ -62,6 +62,8 @@ pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:b
 }
 .droitefermer {
   float:right;
+  font-weight: bold;
+  font-size:1.5em;
 }
  
 .oModal {
