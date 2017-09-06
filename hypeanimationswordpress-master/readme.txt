@@ -1,23 +1,20 @@
 ﻿=== Hype Animations ===
-Author URI: http://www.ERALION.com
-Plugin URI: http://www.ERALION.com
-Donate link: http://www.ERALION.com
-Contributors: freeben
+Author URI: http://www.tumult.com
+Plugin URI: https://forums.tumult.com/t/hype-animations-wordpress-plugin/11074
+Contributors: freeben, tumultinc
 Tags: Hype,Animations
 Requires at least: 4.1
-Tested up to: 4.5.1
+Tested up to: 4.8.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Description: Insert easily your Hype animations into your Wordpress website.
+Description: Easily embed your Hype animations into your Wordpress website.
 
 == Description ==
 
-* **English** : Insert easily your Hype animations into your Wordpress website. If you have a problem, you can <a href="http://www.eralion.com/contactez-nous/" target="_blank">contact-us</a>.
+* **English** : Ce plugin vous permet de télécharger un fichier OAM à partir d'un Hype Tumult et d'intégrer facilement votre animation dans une publication ou une page en utilisant un code court.
 
-* **Français** : Insérez facilement vos animations Hype sur votre site Wordpress. Si vous rencontrez un soucis, vous pouvez <a href="http://www.eralion.com/contactez-nous/" target="_blank">nous contacter</a>.
-
-Hype software is edited by <a href="http://tumult.com" target="_blank">Tumult &copy;</a>, you can get and buy it <a href="http://tumult.com/hype/" target="_blank">here</a>.
+* **Français** : Insérez facilement vos animations Hype sur votre site Wordpress.  
 
 
 == Installation ==
@@ -26,7 +23,7 @@ Hype software is edited by <a href="http://tumult.com" target="_blank">Tumult &c
 1. Download hypeanimations.zip from the "download" link on the web page where you're viewing this.
 2. Decompress the file contents.
 3. Upload the hypeanimations folder to your WordPress plugins directory (/wp-content/plugins/).
-4. Activate the Hype Animations plugin from the WordPress back-office.
+4. Activate the Hype Animations plugin from the WordPress plugin page.
 
 * **Français** :
 1. Téléchargez hypeanimations.zip sur le lien de téléchargement sur cette même page.
@@ -36,15 +33,20 @@ Hype software is edited by <a href="http://tumult.com" target="_blank">Tumult &c
 
 == Usage ==
 
-* **English** : Go to the Hype Animations section added by the plugin and upload your animation exported in .OAM format, the plugin will process your file and generate a shortcode it only remains to insert anywhere.
+* **English** : Go to the Hype Animations section in the Admin dashboard and upload your animation exported in .OAM format. (File > Export as HTML5 > OAM) The plugin will process your file and generate a shortcode it only remains to insert anywhere.
+
 * **Français** : Allez dans la section Hype Animations ajoutée par le plugin et envoyez votre animation exportée au format .OAM, le plugin traitera votre fichier puis génèrera un shortcode qu'il ne restera plus qu'à insérer où vous le souhaitez.
 
-== Screenshots ==
-
-1. Back-office UI
-2. Editor toolbox button
 
 == Changelog ==
+
+= 1.6 =
+* Copy Embed Code from the Animation List
+* Embeds are now protocol-agnostic (uses // instead of http://)
+* Updated to work with WP 4.8.1
+* Maximum file size shown in upload modal
+* Improved Translations
+
 
 = 1.5 =
 * Changing modal popup.
