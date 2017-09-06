@@ -46,7 +46,7 @@ Description: Easily embed your Hype animations into your Wordpress website.
 * Updated to work with WP 4.8.1
 * Maximum file size shown in upload modal
 * Improved Translations
-
+* This plugin was adapted from the work of Eralion: eralion.com. 
 
 = 1.5 =
 * Changing modal popup.

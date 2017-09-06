@@ -2,7 +2,7 @@
 /*
 Plugin Name: Hype Animations
 Description: Insert your Hype animations
-Author: <a href="http://www.tumult.com" target="_blank">Tumult Inc.</a>
+Author: <a href="http://tumult.com" target="_blank">Tumult</a>
 Text Domain: hype-animations
 Domain Path: /languages
 Version: 1.6

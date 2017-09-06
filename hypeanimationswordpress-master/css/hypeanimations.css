@@ -1,3 +1,4 @@
+
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500|Montserrat";
 
 table.dataTable tbody td { border-left:1px solid #000;border-bottom:1px solid #000;text-align:center; }
@@ -84,6 +85,55 @@ pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:b
 	font-weight:bold;
     min-height: 100px !important;
 	background:#eee !important;
+}
+.animdelete { background:#FF0000;margin:1px;color:#FFF;padding:5px;border:1px solid #FF0000;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
+.animdelete:hover { color:#FF0000;background:#fff; }
+.animupdate {background:#0099cc;margin:1px;color:#FFF;padding:5px;border:1px solid #0099cc;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
+.animupdate:hover { color:#0099cc;background:#fff; }
+pre { padding:10px;background:#eee;border:1px solid #eee; }
+pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:bold;}
+.hypeanimbloc { display:inline-block;padding:10px;background:#FFF;border:1px solid #000;color:#000; }
+.eraabout { display:none;float:right; padding-right:20px; }
+.eraabout h2 { text-align:right; }
+.eralink { color:#0099cc; }
+.eralogo {
+  position:absolute;
+  top:10px;
+  right:20px;
+  width:100px;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.hypeanimupdated {
+  margin-left:5px;
+  color:#009933;
+  font-weight:bold;
+  display:inline-block;
+}
+
+#add_hypeanimations_shortcode_button i::before {
+  margin-top: 3px;
+}
+#add_hypeanimations_shortcode_newbutton i::before {
+  margin-top: 3px;
+}
+#choosehypeanimation {
+  background:#0099cc;
+  color:#FFF;
+  padding:5px;
+  border:0;
+  cursor:pointer;
+}
+/*#hypeanimdropzone,#hypeanimdropzone2 {
+  text-align: center;
+  font-weight:bold;
+}*/
+.dropzone,.dropzone2 {
+  text-align: center;
+  font-weight:bold;
+    min-height: 100px !important;
+  background:#eee !important;
+}
     border: 2px dotted rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -99,6 +149,8 @@ pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:b
   float:right;
   font-size:22px;
   text-decoration:none;
+  font-weight: bold;
+  font-size:1.5em;
 }
  
 .oModal {
