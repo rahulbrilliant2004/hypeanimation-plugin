@@ -46,6 +46,11 @@ Hype software is edited by <a href="http://tumult.com" target="_blank">Tumult &c
 
 == Changelog ==
 
+= 1.6 = 
+ 
+* Update to work with Wordpress 4.8.
+* This plugin was adapted from the work of Eralion: eralion.com. 
+
 = 1.5 =
 * Changing modal popup.
 

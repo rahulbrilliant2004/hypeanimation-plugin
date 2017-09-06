@@ -2,10 +2,10 @@
 /*
 Plugin Name: Hype Animations
 Description: Insert your Hype animations
-Author: <a href="http://www.eralion.com" target="_blank">ERALION.com</a>
+Author: <a href="http://tumult.com" target="_blank">Tumult</a>
 Text Domain: hype-animations
 Domain Path: /languages
-Version: 1.5
+Version: 1.6
 */
 #---------------------------------------------------------------------------#
 add_action( 'plugins_loaded', 'hypeanimations_init_lang' );
