@@ -83,8 +83,9 @@ function hypeanimations_panel_upload() {
 					$str=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$lastid,$str);
 					//now, save the file
 					fwrite($fp,$str,strlen($str));
-
+					//copy index.html
 					copy($uploaddir.'Assets/'.$actfile[0].'.html', $upload_dir['basedir'].'/hypeanimations/'.$lastid.'/'.$actfile[0].'.html');
+
 					if (file_exists($uploaddir.'Assets/'.$actfile[0].'.html')) {
 						unlink($uploaddir.'Assets/'.$actfile[0].'.html');
 					}
@@ -317,7 +318,7 @@ function hypeanimations_panel() {
 					$str=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$actdataid,$str);
 					//now, save the file
 					fwrite($fp,$str,strlen($str));
-					
+					//copy index.html
 					copy($uploaddir.'Assets/'.$actfile[0].'.html', $upload_dir['basedir'].'/hypeanimations/'.$actdataid.'/'.$actfile[0].'.html');
 
 					if (file_exists($uploaddir.'Assets/'.$actfile[0].'.html')) {
