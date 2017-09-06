@@ -1,9 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hype Animations\n"
-
-"POT-Creation-Date: 2017-09-06 14:25-0400\n"
-"PO-Revision-Date: 2017-09-06 14:26-0400\n"
+"POT-Creation-Date: 2017-09-06 14:56-0400\n"
+"PO-Revision-Date: 2017-09-06 14:57-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -174,22 +173,15 @@ msgstr "Insérer"
 msgid "Or upload a new one"
 msgstr "Ou ajoutez en une nouvelle"
 
-#: includes/tinymcetool.php:60
-msgid "Drop .OAM file or click here to upload<br>(Max. upload size "
+#: includes/tinymcetool.php:60 includes/tinymcetool.php:75
+msgid "Drop .OAM file or click here to upload<br>(Maximum upload size "
 msgstr "Déposez le fichier .OAM ou cliquez ici pour ajouter votre animation "
 
 #: includes/tinymcetool.php:62
-msgid ""
-"You can now insert this shortcode where you want to insert the animation"
+msgid "Insert the following shortcode where you want to display the animation"
 msgstr ""
 "Vous pouvez maintenant insérer ce shortcode où vous souhaitez insérer "
 "l'animation"
-
-#: includes/tinymcetool.php:75
-#, fuzzy
-#| msgid "Drop .OAM file or click here to upload<br>(Max. upload size "
-msgid "Drop .OAM file or click here to upload<br>(Maximum upload size "
-msgstr "Déposez le fichier .OAM ou cliquez ici pour ajouter votre animation "
 
 #. Plugin Name of the plugin/theme
 msgid "Hype Animations"
@@ -200,8 +192,14 @@ msgid "Insert your Hype animations"
 msgstr "Insérez vos animations Hype"
 
 #. Author of the plugin/theme
-msgid "<a href=\"http://www.tumult.com\" target=\"_blank\">Tumult Inc.</a>"
+#, fuzzy
+#| msgid "<a href=\"http://www.tumult.com\" target=\"_blank\">Tumult Inc.</a>"
+msgid "<a href=\"http://tumult.com\" target=\"_blank\">Tumult</a>"
 msgstr "<a href=\"http://www.tumult.com\" target=\"_blank\">Tumult Inc.</a>"
+
+#~ msgid "Drop .OAM file or click here to upload<br>(Max. upload size "
+#~ msgstr ""
+#~ "Déposez le fichier .OAM ou cliquez ici pour ajouter votre animation "
 
 #~ msgid "Showing animation 0 to 0 of 0 entries"
 #~ msgstr "Affichage de l'animation 0 à 0 sur 0 animations"
