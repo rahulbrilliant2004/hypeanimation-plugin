@@ -72,7 +72,7 @@ function add_hypeanimations_shortcode_button_footer() {
 			uploadMultiple: false,
 			maxFiles: 1,
 			acceptedFiles: ".oam",
-			dictDefaultMessage: "'.__( 'Drop .OAM file or click here to upload<br>(Max. upload size '. ini_get("upload_max_filesize") .')' , 'hype-animations' ).'",
+			dictDefaultMessage: "'.__( 'Drop .OAM file or click here to upload<br>(Maximum upload size '. ini_get("upload_max_filesize") .')' , 'hype-animations' ).'",
 			success: function(file,resp) {
 				wp.media.editor.insert("[hypeanimations_anim id=\""+resp+"\"]");
 				this.removeFile(file);
