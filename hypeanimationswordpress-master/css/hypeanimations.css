@@ -1,7 +1,91 @@
+
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500|Montserrat";
+
 table.dataTable tbody td { border-left:1px solid #000;border-bottom:1px solid #000;text-align:center; }
 table.dataTable tbody td:last-child { border-right:1px solid #000; }
 table.dataTable tbody tr:last-child td { border-bottom:0px; }
 table.dataTable { width:98% !important; }
+
+.animupdate, .animdelete, .animcopy {
+  border-radius:25px;
+  border: #eee solid 2px;
+  color: #eee;
+  display:inline-block;
+  font-family: 'Montserrat', 'Helvetica Neue', arial, sans-serif;
+  letter-spacing: 3px;
+  font-size:14px;
+  font-weight: 400;
+  text-transform:uppercase;
+  line-height:24px;
+  text-align:center;
+  text-decoration:none;
+  padding: 3px 22px;
+  margin-bottom: 8px;
+  word-spacing: normal;
+}
+
+.animdelete {
+  color: #CC383D;
+}
+.animdelete:hover{
+  color: #661D20;
+}
+
+.animcopy:hover, .animcopy:hover {
+  color: #661D20;
+}
+
+.animupdate:hover {
+  background-color: #eee;
+  color: #34363a;
+  transition:.2s;-o-transition:.2s;-ms-transition:.2s;-moz-transition:.2s;-webkit-transition:.2s;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+pre { padding:10px;background:#eee;border:1px solid #eee; }
+pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:bold;}
+.hypeanimbloc { display:inline-block;padding:10px;background:#FFF;border:1px solid #000;color:#000; }
+.eraabout { float:right; padding-right:20px; }
+.eraabout h2 { text-align:right; }
+.eralink { color:#07bee5; }
+.eralogo {
+	position:absolute;
+	top:10px;
+	right:20px;
+	width:100px;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+.hypeanimupdated {
+	margin-left:5px;
+	color:#009933;
+	font-weight:bold;
+	display:inline-block;
+}
+
+#add_hypeanimations_shortcode_button i::before {
+	margin-top: 3px;
+}
+#add_hypeanimations_shortcode_newbutton i::before {
+	margin-top: 3px;
+}
+#choosehypeanimation {
+	background:#336699;
+	color:#FFF;
+	padding:5px;
+	border:0;
+	cursor:pointer;
+}
+/*#hypeanimdropzone,#hypeanimdropzone2 {
+	text-align: center;
+	font-weight:bold;
+}*/
+.dropzone,.dropzone2 {
+	text-align: center;
+	font-weight:bold;
+    min-height: 100px !important;
+	background:#eee !important;
+}
 .animdelete { background:#FF0000;margin:1px;color:#FFF;padding:5px;border:1px solid #FF0000;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
 .animdelete:hover { color:#FF0000;background:#fff; }
 .animupdate {background:#0099cc;margin:1px;color:#FFF;padding:5px;border:1px solid #0099cc;-webkit-border-radius: 50px;-moz-border-radius: 50px;border-radius: 50px;text-decoration:none; }
@@ -49,6 +133,7 @@ pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:b
   font-weight:bold;
     min-height: 100px !important;
   background:#eee !important;
+}
     border: 2px dotted rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -62,6 +147,8 @@ pre:hover { background:#FFF;border:1px solid #07bee5;color:#07bee5;font-weight:b
 }
 .droitefermer {
   float:right;
+  font-size:22px;
+  text-decoration:none;
   font-weight: bold;
   font-size:1.5em;
 }
