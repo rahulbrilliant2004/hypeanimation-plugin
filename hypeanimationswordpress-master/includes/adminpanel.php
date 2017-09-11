@@ -34,8 +34,17 @@ function hypeanimations_panel_upload() {
 					}
 					$insert = $wpdb -> query("INSERT ".$table_name." SET id='',nom='".$new_name."',slug='".str_replace(' ','',strtolower($new_name))."',code='',updated='".time()."',container='div'");
 					$lastid = $wpdb->insert_id;
+
+					@mkdir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$new_name.'.hyperesources/', 0755, true);
+					
 					$jsfiles = scandir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/');
 					for ($j=0;isset($jsfiles[$j]);$j++) {
+						if($jsfiles[$j] != '.' && $jsfiles[$j] != '..'){
+							if(!is_dir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j])){
+								copy($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], $uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$new_name.'.hyperesources/'.$jsfiles[$j]);
+							}
+						}
+
 						if (preg_match('~_hype_generated_script.js~',$jsfiles[$j])) {
 							$jshandle = fopen($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], "r");
 							if ($jshandle) {
@@ -76,14 +85,8 @@ function hypeanimations_panel_upload() {
 						//echo 'error';
 					}
 					$update = $wpdb -> query("UPDATE ".$table_name." SET code='".addslashes(htmlentities($agarder1))."' WHERE id='".$lastid."' LIMIT 1");
-					//read the entire string
-					$str=implode("",file($uploaddir.'Assets/'.$actfile[0].'.html'));
-					$fp=fopen($uploaddir.'Assets/'.$actfile[0].'.html','w');
-					//replace something in the file string, here i am replacing an IP address from  127.0.0.1 to 127.1.9.9
-					$str=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$lastid,$str);
-					//now, save the file
-					fwrite($fp,$str,strlen($str));
-					//copy index.html
+
+					// //copy index.html
 					copy($uploaddir.'Assets/'.$actfile[0].'.html', $upload_dir['basedir'].'/hypeanimations/'.$lastid.'/'.$actfile[0].'.html');
 
 					if (file_exists($uploaddir.'Assets/'.$actfile[0].'.html')) {
@@ -268,8 +271,16 @@ function hypeanimations_panel() {
 					if (file_exists($uploadfinaldir.$actdataid.'/')) {
 						hyperrmdir($uploadfinaldir.$actdataid.'/');
 					}
+
+					@mkdir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$new_name.'.hyperesources/', 0755, true);
+					
 					$jsfiles = scandir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/');
 					for ($j=0;isset($jsfiles[$j]);$j++) {
+						if($jsfiles[$j] != '.' && $jsfiles[$j] != '..'){
+							if(!is_dir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j])){
+								copy($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], $uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$new_name.'.hyperesources/'.$jsfiles[$j]);
+							}
+						}
 						if (preg_match('~_hype_generated_script.js~',$jsfiles[$j])) {
 							$jshandle = fopen($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], "r");
 							if ($jshandle) {
@@ -310,14 +321,6 @@ function hypeanimations_panel() {
 						//echo 'error';
 					}
 					$update = $wpdb -> query("UPDATE ".$table_name." SET code='".addslashes(htmlentities($agarder1))."',updated='".time()."' WHERE id='".$actdataid."' LIMIT 1");
-					//read the entire string
-					$str=implode("",file($uploaddir.'Assets/'.$actfile[0].'.html'));
-					
-					$fp=fopen($uploaddir.'Assets/'.$actfile[0].'.html','w');
-					//replace something in the file string, here i am replacing an IP address from  127.0.0.1 to 127.1.9.9
-					$str=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$actdataid,$str);
-					//now, save the file
-					fwrite($fp,$str,strlen($str));
 					//copy index.html
 					copy($uploaddir.'Assets/'.$actfile[0].'.html', $upload_dir['basedir'].'/hypeanimations/'.$actdataid.'/'.$actfile[0].'.html');
 
@@ -510,4 +513,5 @@ function hypeanimations_getcontent(){
 	echo html_entity_decode($animcode);
     exit();
 }
+
 ?>
