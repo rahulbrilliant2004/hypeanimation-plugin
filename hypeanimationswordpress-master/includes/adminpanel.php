@@ -42,20 +42,7 @@ function hypeanimations_panel_upload() {
 						if($jsfiles[$j] != '.' && $jsfiles[$j] != '..'){
 							if(!is_dir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j])){
 								copy($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], $uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$new_name.'.hyperesources/'.$jsfiles[$j]);
-							}
-						}
-
-						if (preg_match('~_hype_generated_script.js~',$jsfiles[$j])) {
-							$jshandle = fopen($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], "r");
-							if ($jshandle) {
-								$newfile='';
-								while (($jsline = fgets($jshandle)) !== false) {
-									$jsline=str_replace($actfile[0].'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$lastid,$jsline);
-									$newfile.=$jsline;
-								}
-								//reecrire
 								unlink($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j]);
-								file_put_contents($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], $newfile);
 							}
 						}
 					}
@@ -67,7 +54,7 @@ function hypeanimations_panel_upload() {
 					$handle = fopen($uploaddir.'Assets/'.$actfile[0].'.html', "r");
 					if ($handle) {
 						while (($line = fgets($handle)) !== false) {
-							$line=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$lastid,$line);
+							$line=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$lastid.'/'.$new_name.'.hyperesources',$line);
 							if (preg_match('~<div id="~',$line)) {
 								$recordlines=1;
 							}
@@ -279,19 +266,7 @@ function hypeanimations_panel() {
 						if($jsfiles[$j] != '.' && $jsfiles[$j] != '..'){
 							if(!is_dir($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j])){
 								copy($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], $uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$new_name.'.hyperesources/'.$jsfiles[$j]);
-							}
-						}
-						if (preg_match('~_hype_generated_script.js~',$jsfiles[$j])) {
-							$jshandle = fopen($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], "r");
-							if ($jshandle) {
-								$newfile='';
-								while (($jsline = fgets($jshandle)) !== false) {
-									$jsline=str_replace($actfile[0].'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$actdataid,$jsline);
-									$newfile.=$jsline;
-								}
-								//reecrire
 								unlink($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j]);
-								file_put_contents($uploaddir.'Assets/'.$actfile[0].'.hyperesources/'.$jsfiles[$j], $newfile);
 							}
 						}
 					}
@@ -303,7 +278,7 @@ function hypeanimations_panel() {
 					$handle = fopen($uploaddir.'Assets/'.$actfile[0].'.html', "r");
 					if ($handle) {
 						while (($line = fgets($handle)) !== false) {
-							$line=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$actdataid,$line);
+							$line=str_replace($new_name.'.hyperesources',$upload_dir['baseurl'].'/hypeanimations/'.$actdataid.'/'.$new_name.'.hyperesources',$line);
 							if (preg_match('~<div id="~',$line)) {
 								$recordlines=1;
 							}
@@ -331,7 +306,7 @@ function hypeanimations_panel() {
 						hyperrmdir($uploaddir.'Assets/');
 					}
 					$hypeupdated=$actdataid;
-					$hypeupdatetd_title=$actfile[0];
+					$hypeupdatetd_title=$new_name;
 				}
 			}
 		} 

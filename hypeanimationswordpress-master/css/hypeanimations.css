@@ -281,3 +281,11 @@ h3.popup-heading {
     margin: 0;
     padding: 10px 0;
 }
+
+.toplevel_page_hypeanimations_panel #wpbody-content {
+    padding: 0;
+}
+
+.toplevel_page_hypeanimations_panel #wpfooter {
+    position: static;
+}
