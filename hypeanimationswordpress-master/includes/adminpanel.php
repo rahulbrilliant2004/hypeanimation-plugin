@@ -7,11 +7,6 @@ function hypeanimations_panel_upload() {
 	$upload_dir = wp_upload_dir();
 	$anims_dir=$upload_dir['basedir'].'/hypeanimations/';
 	if (isset($_FILES['file'])) {
-		if(strpos(basename($_FILES['file']['name']), " ") !== false)
-		{
-		   echo "<script>alert('You seem to have a space in your animation name. Please remove the space and regenerate the animation.');document.getElementById('closeDroper').click();</script>";
-		   die;
-		}
 		$uploaddir = $anims_dir.'tmp/';
 		$uploadfinaldir = $anims_dir;
 		$uploadfile = $uploaddir . basename($_FILES['file']['name']);
@@ -428,6 +423,7 @@ function hypeanimations_panel() {
 		});
 		jQuery("#hypeanimations").DataTable({
             responsive: true,
+            "order": [[ 0, "desc" ]],
 			"columns": [
 				null,
 				{ "width": "300px" },
